@@ -5,11 +5,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend:start": "cd frontend && npm start",
+    "frontend:build": "cd frontend && npm run build", 
     "backend:start": "cd backend && npm start",
     "backend:dev": "cd backend && npm run dev",
     "backend:seed": "cd backend && npm run seed",
     "dev": "npm-run-all -s backend:seed --continue-on-error -p backend:dev frontend:start",
-    "start": "concurrently \"npm run backend:start\" \"npm run frontend:start\""
+    "start": "concurrently \"npm run backend:start\" \"npm run frontend:start\"",
+    "build": "npm run frontend:build"
   },
   "keywords": [],
   "author": "",
