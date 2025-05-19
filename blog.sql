@@ -1,7 +1,6 @@
-DROP DATABASE IF EXISTS anime_blog_db;
 
-CREATE database if not exists anime_blog_db;
-USE anime_blog_db;
+CREATE DATABASE if not exists bjrvzbqhf9cg2uyq6cdu CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE bjrvzbqhf9cg2uyq6cdu;
 select * from posts;
 select * from users;
 -- Bảng users (Quản trị viên)
@@ -88,3 +87,7 @@ CREATE INDEX idx_comments_post_id ON comments(post_id);
 CREATE INDEX idx_comments_status ON comments(status);
 ALTER TABLE posts MODIFY COLUMN cover_image_url TEXT;
 DESCRIBE posts;
+DESCRIBE users;
+SHOW INDEX FROM categories;
+
+ALTER TABLE `categories` CHANGE `name` `name` VARCHAR(100) NOT NULL UNIQUE;
